@@ -27,14 +27,11 @@
               <a href="{% url 'index' %}">Início</a>
             </li>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'product_list' %}" id="download">Categorias <span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'product_list' %}" id="download"> Categorias <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="download">
-                <li><a href="{% url 'product_list' %}">Alimentação</a></li>
-				        <li><a href="{% url 'product_list' %}">Banho do Bebê</a></li>
-				        <li><a href="{% url 'product_list' %}">Chupetas e Mordedores</a></li>
-                <li><a href="{% url 'product_list' %}">Enxoval do Bebê</a></li>
-                <li><a href="{% url 'product_list' %}">Higiene</a></li>
-                <li><a href="{% url 'product_list' %}">Quarto do Bebê</a></li>
+                  {% for category in categories %}
+                    <li><a href="#">{{category}}</a></li>
+                  {% endfor %}
               </ul>
             </li>
 			<li>
