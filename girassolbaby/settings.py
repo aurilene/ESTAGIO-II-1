@@ -69,7 +69,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
 
                 #apps
-                'catalogo.context_processors.categories'
+                'catalogo.context_processors.categories',
             ],
         },
     },
