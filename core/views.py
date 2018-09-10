@@ -2,7 +2,7 @@
 
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from catalogo.models import Category
 
 
 # Create your views here.
@@ -13,5 +13,4 @@ def index(request):
 def contact(request):
 	return render(request,'contact.html')
 
-def product(request):
-	return render(request,'product.html')
+
