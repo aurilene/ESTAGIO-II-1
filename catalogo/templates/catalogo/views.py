@@ -1,15 +1,15 @@
 # coding=utf-8
-
+'''
 from django.shortcuts import render
 
-from .models import Product, Category
+from .models import Product,Category
 
 
 def product_list(request):
     context = {
         'product_list': Product.objects.all()
     }
-    return render(request, 'catalog/product_list.html', context)
+    return render(request, 'catalogo/product_list.html', context)
 
 
 def category(request, slug):
@@ -18,4 +18,6 @@ def category(request, slug):
         'current_category': category,
         'product_list': Product.objects.filter(category=category),
     }
-    return render(request, 'catalog/category.html', context)
+    return render(request, 'catalogo/category.html', context)
+
+'''
